@@ -1,6 +1,17 @@
+import 'package:ejemplo/add.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MainApp());
 }
 
@@ -11,9 +22,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color(0xFF41818A),
-          textTheme: const TextTheme(bodyLarge: TextStyle(color: Colors.white)),
-),
+        scaffoldBackgroundColor: const Color(0xFF41818A),
+        textTheme: const TextTheme(bodyLarge: TextStyle(color: Colors.white)),
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
@@ -29,6 +40,7 @@ class MainApp extends StatelessWidget {
               //   'Gucumatz',
               //   style: Theme.of(context).textTheme.headlineLarge,
               // ),
+              AddCliente('Ernesto', '1234', '12341234'),
               const Menu(),
               const Carrousel(
                 title: "CURSOS MÁS BUSCADOS",
@@ -110,7 +122,7 @@ class Menu extends StatelessWidget {
 }
 
 class Carrousel extends StatelessWidget {
-  final title;
+  final String title;
   const Carrousel({
     required this.title,
     super.key,
@@ -124,7 +136,7 @@ class Carrousel extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Text(
-            '$title',
+            title,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "116238447250",
+    "project_id": "seccione-c9383",
+    "storage_bucket": "seccione-c9383.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116238447250:android:58262d52152afe4bd52c4b",
+        "android_client_info": {
+          "package_name": "com.example.ejemplo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116238447250-ppcm5k909h92cpu682c54r0tclu7nbtd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWo1iqUIQEdh_M5G2fbZBL6zSJFlfBUg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116238447250-ppcm5k909h92cpu682c54r0tclu7nbtd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
